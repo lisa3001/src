@@ -13,6 +13,8 @@ import { CustomersComponent } from './pages/customers/customers.component';
 import { InvoicesComponent } from './pages/invoices/invoices.component';
 import { SuppliersComponent } from './pages/suppliers/suppliers.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
+import { OrderModule } from 'ngx-order-pipe';
+import { CurrentCustomerComponent } from './pages/current-customer/current-customer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { StatisticsComponent } from './pages/statistics/statistics.component';
     CustomersComponent,
     InvoicesComponent,
     SuppliersComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    CurrentCustomerComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { StatisticsComponent } from './pages/statistics/statistics.component';
     GraphQLModule,
     HttpClientModule,
     NgxPaginationModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

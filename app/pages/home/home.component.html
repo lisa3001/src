@@ -19,10 +19,10 @@
 				<div class="col-md-12">
 					<div class="category-wrap">
 						<div class="row no-gutters">
-							<div class="col-md-3" routerLink="/customers">
+							<div class="col-md-3" (click)="replaceCustomers()" routerLink="/customers">
 								<div class="top-category text-center no-border-left">
 									<span class="icon flaticon-employees"></span>
-									<h3><a routerLink="/customers">Customers</a></h3>
+									<h3><a (click)="replaceCustomers()" routerLink="/customers">Customers</a></h3>
 								</div>
 							</div>
 							<div class="col-md-3" routerLink="/invoices">

@@ -9,11 +9,6 @@ import { CommonModule } from '@angular/common';
 })
 export class TypesModule { }
 
-export type Sample = {
-	samplename: String,
-	samplecode: number
-}
-
 export type Customer = {
   CustomerName: String
   CostumerCategory: String

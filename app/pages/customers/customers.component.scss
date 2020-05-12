@@ -81,7 +81,7 @@
 		}
 	}
 	&.hero-wrap-2{
-		height: 400px !important;
+		height: 280px !important;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: top center;
@@ -89,10 +89,10 @@
 			background-position: top center !important;
 		}
 		.slider-text{
-			height: 400px !important;
+			height: 280px !important;
 			@include media-breakpoint-down(md){
 				text-align: center;
-				height: 400px !important;
+				height: 280px !important;
 			}
 		}
 	}
