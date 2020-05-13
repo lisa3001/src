@@ -108,3 +108,38 @@
 
 //*************************************************************************************************************
 
+.img{
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+	@include border-radius(50%);
+}
+
+input{
+	background: transparent; 
+	border: 1px solid rgba(28,110,164,0.47);
+}
+
+label{
+	color: #003459;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+	height:0;
+	-webkit-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}

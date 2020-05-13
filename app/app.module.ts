@@ -15,6 +15,7 @@ import { SuppliersComponent } from './pages/suppliers/suppliers.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 import { OrderModule } from 'ngx-order-pipe';
 import { CurrentCustomerComponent } from './pages/current-customer/current-customer.component';
+import { SafePipePipe } from './safe-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CurrentCustomerComponent } from './pages/current-customer/current-custo
     InvoicesComponent,
     SuppliersComponent,
     StatisticsComponent,
-    CurrentCustomerComponent
+    CurrentCustomerComponent,
+    SafePipePipe
   ],
   imports: [
     BrowserModule,

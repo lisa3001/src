@@ -7,9 +7,13 @@ import { MainserviceService } from 'src/app/mainservice.service';
   styleUrls: ['./current-customer.component.scss']
 })
 export class CurrentCustomerComponent implements OnInit {
-
-  constructor(public mainservice: MainserviceService) { }
-
+  mapUrl: string = "";
+  constructor(public mainservice: MainserviceService) { 
+    this.mapUrl = "https://maps.google.com/maps?q=";
+    this.mapUrl += ((mainservice.currentCustomer.Lat.toString()) + ",");
+    this.mapUrl += ((mainservice.currentCustomer.Long.toString())+"&hl=es;z=14&amp;&output=embed");
+    console.log(this.mapUrl)
+  }
   ngOnInit(): void {
   }
 

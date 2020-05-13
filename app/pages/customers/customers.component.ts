@@ -110,12 +110,10 @@ export class CustomersComponent implements OnInit {
   }
 
   viewCostumer(i: number){
-    console.log(i);
     if(!this.reverse) this.mainservice.customers.sort((a, b) => (a.CustomerName > b.CustomerName) ? 1 : -1)
     else this.mainservice.customers.sort((a, b) => (a.CustomerName < b.CustomerName) ? 1 : -1)
     this.mainservice.currentCustomer = this.mainservice.customers[i];
     this.mainservice.currentCustomerIndex = i;
-    console.log(this.mainservice.currentCustomer);
     this.router.navigate([this.link]);
   }
 
