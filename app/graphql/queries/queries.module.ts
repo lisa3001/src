@@ -31,8 +31,8 @@ export const getAllCustomers = gql`
   }`;
 
 export const getCustomerByFilters = gql`
-  query GetCustomerByFilters($ubication: String!, $namesHint: String!, $category: String!, $postalCode: String!){
-    getCustomerByFilters(ubication: $ubication, namesHint: $namesHint, category: $category, postalCode: $postalCode){
+  query GetCustomerByFilters($ubication: String!, $namesHint: String!, $category: String!){
+    getCustomerByFilters(ubication: $ubication, namesHint: $namesHint, category: $category){
       CustomerName
       CostumerCategory
       BuyingGroup
@@ -47,5 +47,41 @@ export const getCustomerByFilters = gql`
       PostalAddress
       PostalCode
       Ubication
+    }
+  }`;
+
+export const getItemsFromAllInvoices = gql`
+  query{
+    getItemsFromAllInvoices{
+      StockItemName
+      Description
+      PackageTypeName
+      Quantity
+      UnitPrice
+      TaxRate
+      TaxAmount
+      LineProfit
+      ExtendedPrice
+      SupplierName
+      SupplierCategoryName
+    }
+  }`;
+
+export const getAllInvoices = gql`
+  query{
+    getAllInvoices{
+    TransactionAmount
+    FinalizationDate
+    InvoiceID
+    CustomerName
+    CustomerCategoryName
+    Location
+    DeliveryMethodName
+    ContactPerson
+    SalesPerson
+    PackedByPerson
+    DeliveryInstructions
+    ConfirmedReceivedBy
+    ConfirmedDeliveryTime
     }
   }`;

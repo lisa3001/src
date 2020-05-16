@@ -9,7 +9,7 @@ import {CurrentCustomerComponent} from './pages/current-customer/current-custome
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
-  {path:'customers', component: CustomersComponent},
+  {path:'customers', component: CustomersComponent, children: []},
   {path:'invoices', component: InvoicesComponent},
   {path:'suppliers', component: SuppliersComponent},
   {path:'statistics', component: StatisticsComponent},
@@ -17,7 +17,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,
+    {
+      useHash: true
+    })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

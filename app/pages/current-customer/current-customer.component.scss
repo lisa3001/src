@@ -120,11 +120,12 @@
 
 input{
 	background: transparent; 
-	border: 1px solid rgba(28,110,164,0.47);
+	border: 0px;
 }
 
 label{
 	color: #003459;
+	margin-left: 1%;
 }
 
 .map-responsive{
@@ -132,9 +133,6 @@ label{
     padding-bottom:56.25%;
     position:relative;
 	height:0;
-	-webkit-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
-	-moz-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
-	box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.75);
 }
 .map-responsive iframe{
     left:0;
@@ -142,4 +140,10 @@ label{
     height:100%;
     width:100%;
     position:absolute;
+}
+
+.customForm{
+	-webkit-box-shadow: 10px 10px 5px -8px rgba(227,224,227,1);
+	-moz-box-shadow: 10px 10px 5px -8px rgba(227,224,227,1);
+	box-shadow: 10px 10px 5px -8px rgba(227,224,227,1);
 }

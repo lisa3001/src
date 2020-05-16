@@ -4,20 +4,6 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
             <div class="col-md-12 ftco-animate text-center mb-5">
-                <p class="breadcrumbs mb-0">
-                    <span class="mr-3"><a routerLink="" style="color: white;">Home <svg class="bi bi-chevron-right"
-                                width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z"
-                                    clip-rule="evenodd" /></svg></a></span>
-                    <span class="mr-3"><a routerLink="/customers" style="color: white;">Customers <svg
-                                class="bi bi-chevron-right" width="1em" height="1em" viewBox="0 0 16 16"
-                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z"
-                                    clip-rule="evenodd" /></svg></a></span>
-                </p>
                 <h1 class="mb-3 bread">Customer Information</h1>
             </div>
         </div>
@@ -42,87 +28,98 @@
                         <a href="" data-target="#invoices" data-toggle="tab" class="nav-link font-weight-bold">Customer Invoices</a>
                     </li>
                 </ul>
-                <div class="tab-content py-4">
+                <hr>
+                <div class="tab-content py-4 customForm">
                     <div class="tab-pane active" id="info">
                         <form role="form">
-                            <div class="form-group row  ">
-                                <label class=" col-lg-3 col-form-label form-control-label">Customer name</label>
-                                <div class="col-lg-9">
-                                    <input disabled="true" class="col-lg-6 col-form-label form-control-label" value="{{mainservice.currentCustomer.CustomerName}}">
+                            <div class="form-group row col-lg-12">
+                                <label class="font-weight-bold col-lg-3 col-form-label form-control-label">Customer name</label>
+                                <div class="col-lg-8">
+                                    <input disabled="true" class="col-lg-8 col-form-label form-control-label" value="{{mainservice.currentCustomer.CustomerName}}">
                                 </div>
                             </div>
-                            <div class="form-group row ">
-                                <label class=" col-lg-3 col-form-label form-control-label">Customer Category</label>
-                                <div class="col-lg-9">
-                                    <input disabled="true" class=" col-lg-6 col-form-label form-control-label" value="{{mainservice.currentCustomer.CostumerCategory}}">
+                            <hr>
+                            <div class="form-group row col-lg-12">
+                                <label class="font-weight-bold col-lg-3 col-form-label form-control-label">Customer Category</label>
+                                <div class="col-lg-8">
+                                    <input disabled="true" class=" col-lg-8 col-form-label form-control-label" value="{{mainservice.currentCustomer.CostumerCategory}}">
                                 </div>
                             </div>
-                            <div class="form-group row ">
-                                <label class=" col-lg-3 col-form-label form-control-label">Buying Group</label>
-                                <div class="col-lg-9">
-                                    <input disabled="true" class=" col-lg-6 col-form-label form-control-label" value="{{mainservice.currentCustomer.BuyingGroup}}">
+                            <hr>
+                            <div class="form-group row col-lg-12">
+                                <label class="font-weight-bold col-lg-3 col-form-label form-control-label">Buying Group</label>
+                                <div class="col-lg-8">
+                                    <input disabled="true" class=" col-lg-8 col-form-label form-control-label" value="{{mainservice.currentCustomer.BuyingGroup}}">
                                 </div>
                             </div>
-                            <div class="form-group row ">
-                                <label class=" col-lg-3 col-form-label form-control-label">Primary Contact</label>
-                                <div class="col-lg-9">
-                                    <input disabled="true" class=" col-lg-6 col-form-label form-control-label" value="{{mainservice.currentCustomer.PrimaryContact}}">
+                            <hr>
+                            <div class="form-group row col-lg-12">
+                                <label class="font-weight-bold col-lg-3 col-form-label form-control-label">Primary Contact</label>
+                                <div class="col-lg-8">
+                                    <input disabled="true" class=" col-lg-8 col-form-label form-control-label" value="{{mainservice.currentCustomer.PrimaryContact}}">
                                 </div>
                             </div>
-                            <div class="form-group row ">
-                                <label class=" col-lg-3 col-form-label form-control-label">Alternate Contact</label>
-                                <div class="col-lg-9">
-                                    <input disabled="true" class=" col-lg-6 col-form-label form-control-label" value="{{mainservice.currentCustomer.AlternateContact}}">
+                            <hr>
+                            <div class="form-group row col-lg-12">
+                                <label class="font-weight-bold col-lg-3 col-form-label form-control-label">Alternate Contact</label>
+                                <div class="col-lg-8">
+                                    <input disabled="true" class=" col-lg-8 col-form-label form-control-label" value="{{mainservice.currentCustomer.AlternateContact}}">
                                 </div>
                             </div>
-                            <div class="form-group row ">
-                                <label class=" col-lg-3 col-form-label form-control-label">Delivery Method</label>
-                                <div class="col-lg-9">
-                                    <input disabled="true" class=" col-lg-6 col-form-label form-control-label" value="{{mainservice.currentCustomer.DeliveryMethod}}">
+                            <hr>
+                            <div class="form-group row col-lg-12">
+                                <label class="font-weight-bold col-lg-3 col-form-label form-control-label">Delivery Method</label>
+                                <div class="col-lg-8">
+                                    <input disabled="true" class=" col-lg-8 col-form-label form-control-label" value="{{mainservice.currentCustomer.DeliveryMethod}}">
                                 </div>
                             </div>
-                            <div class="form-group row ">
-                                <label class=" col-lg-3 col-form-label form-control-label">Phone Number</label>
-                                <div class="col-lg-9">
-                                    <input disabled="true" class=" col-lg-6 col-form-label form-control-label" value="{{mainservice.currentCustomer.PhoneNumber}}">
+                            <hr>
+                            <div class="form-group row col-lg-12">
+                                <label class="font-weight-bold col-lg-3 col-form-label form-control-label">Phone Number</label>
+                                <div class="col-lg-8">
+                                    <input disabled="true" class=" col-lg-8 col-form-label form-control-label" value="{{mainservice.currentCustomer.PhoneNumber}}">
                                 </div>
                             </div>
-                            <div class="form-group row ">
-                                <label class=" col-lg-3 col-form-label form-control-label">Fax Number</label>
-                                <div class="col-lg-9">
-                                    <input disabled="true" class=" col-lg-6 col-form-label form-control-label" value="{{mainservice.currentCustomer.FaxNumber}}">
+                            <hr>
+                            <div class="form-group row col-lg-12">
+                                <label class="font-weight-bold col-lg-3 col-form-label form-control-label">Fax Number</label>
+                                <div class="col-lg-8">
+                                    <input disabled="true" class=" col-lg-8 col-form-label form-control-label" value="{{mainservice.currentCustomer.FaxNumber}}">
                                 </div>
                             </div>
-                            <div class="form-group row ">
-                                <label class=" col-lg-3 col-form-label form-control-label">Postal Address</label>
-                                <div class="col-lg-9">
-                                    <input disabled="true" class=" col-lg-6 col-form-label form-control-label" value="{{mainservice.currentCustomer.PostalAddress}}">
+                            <hr>
+                            <div class="form-group row col-lg-12">
+                                <label class="font-weight-bold col-lg-3 col-form-label form-control-label">Postal Address</label>
+                                <div class="col-lg-8">
+                                    <input disabled="true" class=" col-lg-8 col-form-label form-control-label" value="{{mainservice.currentCustomer.PostalAddress}}">
                                 </div>
                             </div>
-                            <div class="form-group row ">
-                                <label class=" col-lg-3 col-form-label form-control-label">Delivery Address</label>
-                                <div class="col-lg-9">
-                                    <input disabled="true" class=" col-lg-6 col-form-label form-control-label" value="{{mainservice.currentCustomer.DeliveryAddress}}">
+                            <hr>
+                            <div class="form-group row col-lg-12">
+                                <label class="font-weight-bold col-lg-3 col-form-label form-control-label">Delivery Address</label>
+                                <div class="col-lg-8">
+                                    <input disabled="true" class=" col-lg-8 col-form-label form-control-label" value="{{mainservice.currentCustomer.DeliveryAddress}}">
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class=" col-lg-3 col-form-label form-control-label">Postal Code</label>
-                                <div class="col-lg-9">
-                                    <input disabled="true" class=" col-lg-6 col-form-label form-control-label" value="{{mainservice.currentCustomer.PostalCode}}">
+                            <hr>
+                            <div class="form-group row col-lg-12">
+                                <label class="font-weight-bold col-lg-3 col-form-label form-control-label">Postal Code</label>
+                                <div class="col-lg-8">
+                                    <input disabled="true" class=" col-lg-8 col-form-label form-control-label" value="{{mainservice.currentCustomer.PostalCode}}">
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div class="tab-pane" id="location">
                         <form role="form">
-                            <div class="form-group row">
-                                <div class="col-lg-12">
-                                    <input disabled="true" class="col-lg-6 col-form-label form-control-label" value="{{mainservice.currentCustomer.Ubication}}">
+                            <div class="form-group row col-lg-12">
+                                <div class="col-lg-12" style="margin-left: 1%;">
+                                    <input style="color: #003459;" disabled="true" class="font-weight-bold col-lg-12 col-form-label form-control-label" value="{{mainservice.currentCustomer.Ubication}}">
                                 </div>
                             </div>
                         </form>
-                        <div class="map-responsive">
-                            <iframe [attr.src]="mapUrl | safePipe" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+                        <div class="map-responsive row col-lg-12" style="margin-left: 1%; margin-right: 1%;">
+                            <iframe class="col-lg-12" [attr.src]="mapUrl | safePipe" width="100%" height="100%" frameborder="0" style="border:0" ></iframe>
                         </div>
                     </div>
                     <div class="tab-pane" id="invoices">

@@ -39,6 +39,7 @@ import { SafePipePipe } from './safe-pipe.pipe';
     OrderModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

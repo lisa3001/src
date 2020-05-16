@@ -4,7 +4,7 @@ import { Apollo } from 'apollo-angular';
 import { OrderPipe } from 'ngx-order-pipe';
 import { Customer } from 'src/app/graphql/types/types.module';
 import { getCustomerByFilters } from 'src/app/graphql/queries/queries.module';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-customers',
@@ -23,10 +23,13 @@ export class CustomersComponent implements OnInit {
   isDisabledDesc: boolean = false;
   predicate: string = "CustomerName";
   link: string = "current-customer"
+  activatedRoute: ActivatedRoute;
 
-  constructor(public mainservice: MainserviceService, private apollo: Apollo, public orderPipe: OrderPipe, private router: Router) {
+  constructor(public mainservice: MainserviceService, private apollo: Apollo, public orderPipe: OrderPipe,
+     private router: Router, public route: ActivatedRoute) {
     this.reverse = false;
     this.isDisabledAsc = true;
+  
    }
 
   ngOnInit(): void {
@@ -49,28 +52,23 @@ export class CustomersComponent implements OnInit {
     return result
   }
 
-  onPageChange(event: any){
-    console.log(event);
-    this.config.currentPage = event;
-  }
-
   searchCustomers(){
     var customerName = (<HTMLInputElement>document.getElementById("field-customer-name")).value;
     var customerCategory = (<HTMLInputElement>document.getElementById("field-customer-category")).value;
     var customerLocation = (<HTMLInputElement>document.getElementById("field-customer-location")).value;
-    if(this.validateFields(customerName, customerCategory, customerLocation)){
+    if(customerName != "" || customerCategory != "" || customerLocation != ""){
       this.apollo.query({
         query: getCustomerByFilters,
         variables: {
           ubication: customerLocation,
           namesHint: customerName,
-          category: customerCategory,
-          postalCode: ""
+          category: customerCategory
         }
       }).subscribe(result => {
-        this.mainservice.customers = result.data['getCustomerByFilters'] as Customer[];
+        if(!result.data['getCustomerByFilters'] ) this.mainservice.customers = result.data['getCustomerByFilters'] as Customer[];
       });
-      this.clearSearch()
+      this.clearSearch();
+      this.config.currentPage = 1;
     }
   }
 
@@ -83,13 +81,6 @@ export class CustomersComponent implements OnInit {
     (<HTMLInputElement>document.getElementById("field-customer-location")).value = "";
   }
 
-  validateFields(customerName: string, customerCategory: string, customerLocation: string){
-    this.textChange("field-customer-name", "Write a name!");
-    this.textChange("field-customer-category", "Write a category!");
-    this.textChange("field-customer-location", "Write a location!");
-    if(customerName == "" || customerCategory == "" || customerLocation == "") return false
-    else return true
-  }
 
   clearTag(tagName: string, message: string) {
     var element = (document.getElementById(tagName) as HTMLInputElement);
@@ -98,22 +89,12 @@ export class CustomersComponent implements OnInit {
     element.placeholder = message;
   }
 
-  textChange(tagName: string, errorMessage: string) {
-    var element = (document.getElementById(tagName) as HTMLInputElement);
-    if (element.value.trim() == ""){
-      element.className += " is-invalid";
-      element.placeholder = errorMessage;
-    } else {
-      element.classList.remove("is-invalid");
-      element.className += " is-valid";
-    }
-  }
-
   viewCostumer(i: number){
     if(!this.reverse) this.mainservice.customers.sort((a, b) => (a.CustomerName > b.CustomerName) ? 1 : -1)
     else this.mainservice.customers.sort((a, b) => (a.CustomerName < b.CustomerName) ? 1 : -1)
     this.mainservice.currentCustomer = this.mainservice.customers[i];
     this.mainservice.currentCustomerIndex = i;
+    //this.router.navigate(['./current-customer'], {relativeTo: this.route});
     this.router.navigate([this.link]);
   }
 

@@ -31,7 +31,7 @@
 		}
 		> .nav-item {
 			> .nav-link {
-				font-size: 16px;
+				font-size: 17px;
 				padding-top: .9rem;
 				padding-bottom: .9rem;
 				padding-left: 20px;
@@ -39,7 +39,7 @@
 				color: $white;
 				font-weight: 400;
 				&:hover {
-					color: $secondary;
+					color: #a8dadc;
 				}
 				opacity: 1!important;
 				@include media-breakpoint-down(md){
@@ -224,5 +224,15 @@
 .navbar-brand {
 	font-size: 20px;
 	font-weight: 700;
+}
+
+.itemActive{
+	cursor: pointer;
+}
+
+.itemActive a{
+	color: 	#a8dadc !important;
+	text-decoration: underline !important;
+	
 }
 

@@ -25,3 +25,33 @@ export type Customer = {
   PostalCode: String
   Ubication: String
 }
+
+export type Item = {
+  StockItemName: String
+  Description: String
+  PackageTypeName: String
+  Quantity: number
+  UnitPrice: number
+  TaxRate: number
+  TaxAmount: number
+  LineProfit: number
+  ExtendedPrice: number
+  SupplierName: String
+  SupplierCategoryName: String
+}
+
+export type Invoice = {
+  TransactionAmount: number
+  FinalizationDate: String
+  InvoiceID: number
+  CustomerName: String
+  CustomerCategoryName: String
+  Location: String
+  DeliveryMethodName: String
+  ContactPerson: String
+  SalesPerson: String
+  PackedByPerson: String
+  DeliveryInstructions: String
+  ConfirmedReceivedBy: String
+  ConfirmedDeliveryTime: String
+}
